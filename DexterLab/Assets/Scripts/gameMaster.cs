@@ -11,14 +11,14 @@ public class gameMaster : MonoBehaviour
     public ProblemDescriptor descriptor;
     private int contador = 1;
     private int inicial = 5;
-    
+
     public void firstContinue() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void secondContinue() {
         Texto_Inicial.text = ("Vamos começar, este é o problema " + contador + ":");
         Texto_Info.text = ("\n[Problema aqui]\n ");
-        
+
     }
     public void thirdContinue() {
         Texto_Inicial.text = ("Este é o problema: " + contador);
@@ -41,13 +41,14 @@ public class gameMaster : MonoBehaviour
                 break;
             default:
                 Debug.Log("Scene não existente");
+                Debug.Log("Scene não existente mesmo!");
                 break;
-        }       
+        }
     }
     public void tentarNovamente()
     {
         /*
-         * Tentar Novamente correto 
+         * Tentar Novamente correto
         SceneManager.LoadScene(inicial + descriptor.contador + 1);
         */
         SceneManager.LoadScene(6);
